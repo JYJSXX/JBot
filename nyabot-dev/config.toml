@@ -58,4 +58,4 @@ report_gid = 1022660464
 admin = [2055663122]
 
 # CQHTTPGroupMessageCommandHandlerPluginConfig
-limited_group_ids = [1022660464]
+limited_group_ids = [1022660464, 965986157]

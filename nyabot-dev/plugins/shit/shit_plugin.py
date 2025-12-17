@@ -33,14 +33,12 @@ class ShitPlugin(
     ]
 ):
     async def ask_poe(self, message: str) -> ReturnValue:
-        client = fp.Client(api_key=api_key)
+        message = "想象你是一个高智商高情商的毒舌人设，请你用尽量简短的纯文本来回复：" + message
         msg = fp.ProtocolMessage(role="user", content=message)
-        async for chunk in client.send_message(model="GPT-5.2", message=msg):
-            if chunk.is_done:
-                break
-            if chunk.is_error:
-                raise Exception(chunk.text)
-        return ReturnValue(0, reply=chunk.text)
+        chunks = ""
+        async for chunk in fp.get_bot_response(messages=[msg], bot_name="GPT-5.2", api_key=api_key):
+            chunks += chunk.text
+        return ReturnValue(0, reply=chunks)
     command = LeafCommand(
         name="ask",
         desc="ask",

@@ -1,0 +1,61 @@
+# * Bot 配置
+[bot]
+plugin_dirs = [
+    "plugins/debugger",
+    "plugins/command_helper",
+    "plugins/controller",
+    "plugins/shit",
+    # "plugins/ustc_mleague",
+]
+adapters = ["alicebot.adapter.cqhttp"]
+
+#! 用于 bot 级回调函数没有事件和插件时的上报
+bot_report_gid = 1022660464
+
+# * 适配器配置
+[adapter.cqhttp]
+adapter_type = "ws"
+host = "napcat"
+port = 3001
+
+# * 插件配置
+# ? debugger
+[plugin.debugger]
+#! 其实这些配置都是可选的，哪一项不需要就可以不写，但最好了解不写时的语义
+# NYAPluginConfig
+report_gid = 1022660464
+#! 这个配置需要 __init_state__ 函数定义了才能生效
+state_filename = "debugger.json"
+
+# CQHTTPGroupMessageCommandHandlerPluginConfig
+limited_group_ids = [1022660464]
+[plugin.debugger.role_to_qq_uin_list_map]
+admin = [2055663122,1596944396]
+
+[plugin.controller]
+# NYAPluginConfig
+report_gid = 1022660464
+state_filename = "debugger.json"
+
+# CQHTTPGroupMessageCommandHandlerPluginConfig
+limited_group_ids = [1022660464]
+[plugin.controller.role_to_qq_uin_list_map]
+admin = [2055663122,1596944396]
+
+[plugin.command_helper]
+# NYAPluginConfig
+report_gid = 1022660464
+state_filename = "debugger.json"
+
+# CQHTTPGroupMessageCommandHandlerPluginConfig
+limited_group_ids = [1022660464]
+
+
+[plugin.shit]
+report_gid = 1022660464
+
+[plugin.shit.role_to_qq_uin_list_map]
+admin = [2055663122]
+
+# CQHTTPGroupMessageCommandHandlerPluginConfig
+limited_group_ids = [1022660464]

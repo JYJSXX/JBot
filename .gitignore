@@ -1,0 +1,4 @@
+.mypy_cache
+.vscode
+data/
+/**/.DS_Store

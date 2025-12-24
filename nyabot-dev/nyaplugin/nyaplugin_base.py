@@ -1,6 +1,6 @@
-from abc import ABC
 import json
 import os
+from abc import ABC
 from typing import Any, Optional, TypeVar, cast, final
 
 from alicebot import Bot, Event, Plugin

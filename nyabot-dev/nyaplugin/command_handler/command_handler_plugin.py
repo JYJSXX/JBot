@@ -4,7 +4,7 @@ from functools import cached_property
 from typing import Any, Awaitable, Optional, TypeVar, final, override
 
 from alicebot.adapter.cqhttp.event import GroupMessageEvent
-from pydantic import model_validator, computed_field
+from pydantic import computed_field
 from structlog import get_logger
 
 from nyaplugin.nyaplugin_base import NYAPlugin, NYAPluginConfig, NYAPluginState

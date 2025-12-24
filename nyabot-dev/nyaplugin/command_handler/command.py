@@ -45,18 +45,6 @@ class ReturnValue:
         self.need_help = need_help
 
 
-class Exception(Exception):
-    """
-    插件命令回调函数抛出的异常类型。
-    抛出该异常会中止当前命令的执行，并返回指定的 ReturnValue。
-
-    :var ReturnValue return_value: 返回值
-    """
-
-    def __init__(self, return_value: ReturnValue):
-        self.return_value = return_value
-
-
 class Function:
     """
     封装一个插件命令回调函数。

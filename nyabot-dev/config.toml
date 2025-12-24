@@ -53,9 +53,10 @@ limited_group_ids = [1022660464]
 
 [plugin.shit]
 report_gid = 1022660464
+state_filename = "shit.json"
 
 [plugin.shit.role_to_qq_uin_list_map]
 admin = [2055663122]
 
 # CQHTTPGroupMessageCommandHandlerPluginConfig
-limited_group_ids = [1022660464, 965986157]
+limited_group_ids = [1022660464, 965986157, 858711819]

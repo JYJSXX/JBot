@@ -4,6 +4,7 @@ RUN pip install \
     # development dependencies
     "alicebot[all]==0.11.0" aiohttp==3.12.15 pydantic==2.11.7 fastapi-poe==0.0.81
 
+COPY fix/bot.py /usr/local/lib/python3.12/site-packages/alicebot/bot.py
 
 RUN apt-get update && apt-get install -y gosu
 

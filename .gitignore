@@ -2,3 +2,5 @@
 .vscode
 data/
 /**/.DS_Store
+logs
+logs.txt
